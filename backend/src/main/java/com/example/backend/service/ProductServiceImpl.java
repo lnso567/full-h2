@@ -9,17 +9,25 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d05275e7f3a8dc2cc236de44e5bfc1adcf1f9716
 @Service
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
     private ProductRepository productRepository;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> d05275e7f3a8dc2cc236de44e5bfc1adcf1f9716
     @Override
     public List<Product> getAllProducts(){
         return productRepository.findAll();
     }
+<<<<<<< HEAD
 
     @Override
     public Optional<Product> getProductById(Long id){
@@ -42,3 +50,23 @@ public class ProductServiceImpl implements ProductService{
     }
 
 }
+=======
+    @Override
+    public Optional<Product> getProductsById(Long id){
+        return productRepository.findById(id);
+    }
+    @Override
+    public Product saveProduct(Product Product){
+        return productRepository.save(product);
+    }
+    @Override
+    public Product updateProduct(Product Product){
+        return productRepository.save(product);
+    }
+    @Override
+    public void deleteProduct(Long id){
+        productRepository.deleteById(id)
+    }
+
+}
+>>>>>>> d05275e7f3a8dc2cc236de44e5bfc1adcf1f9716
